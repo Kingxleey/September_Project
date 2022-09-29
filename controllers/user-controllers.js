@@ -7,7 +7,7 @@ exports.deleteUser = CatchAsync(async (req, res, next) => {
   const user = await User.findById(req.params.id);
   if (!user) {
     return next(
-      new ErrorObject(`There is no user with the id ${req.params.id}`, 400)
+      new ErrorObject(`There is no user With the id ${req.params.id}`, 400)
     );
   }
   await User.findByIdAndDelete(req.params.id);
