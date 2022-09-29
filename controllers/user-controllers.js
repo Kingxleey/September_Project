@@ -2,6 +2,7 @@ const User = require("../models/User.js");
 const CatchAsync = require("../utils/catch-async.js");
 const ErrorObject = require("../utils/error.js");
 
+
 // Delete A User
 exports.deleteUser = CatchAsync(async (req, res, next) => {
   const user = await User.findById(req.params.id);
@@ -51,6 +52,7 @@ exports.getAllUser = CatchAsync(async (req, res, next) => {
     },
   });
 });
+
 
 //  Get One User
 exports.getOneUser = CatchAsync(async (req, res, next) => {
